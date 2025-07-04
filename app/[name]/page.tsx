@@ -1,19 +1,18 @@
-import React from "react";
 import data from "@/data.json";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { use } from "react";
 
-export default function CountryDetailPage() {
-  // Get the country name from the route params
-  const params = useParams();
-  const nameParam = params?.name;
-  const countryName = decodeURIComponent(
-    Array.isArray(nameParam) ? nameParam[0] : nameParam || ""
-  );
-  const country = data.find(
-    (c) => c.name.toLowerCase() === countryName.toLowerCase()
-  );
+export default function CountryDetailPage({
+  params,
+}: {
+  params: Promise<{ name: string }>;
+}) {
+  const { name } = use(params);
+
+  //   const nameParam = params?.name;
+
+  const country = data.find((c) => c.name.toLowerCase() === name.toLowerCase());
 
   if (!country) {
     return <div className="text-center mt-10">Country not found.</div>;

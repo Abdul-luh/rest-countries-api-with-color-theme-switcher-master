@@ -2,6 +2,7 @@ import React from "react";
 import Search from "./Search";
 import data from "@/data.json";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Main() {
   return (
@@ -11,7 +12,8 @@ export default function Main() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {data.map((country) => (
-            <div
+            <Link
+              href={`/${country.name.toLowerCase()}`}
               key={country.name}
               className="bg-white dark:bg-blue-900 rounded-lg shadow-md m-4"
             >
@@ -34,7 +36,7 @@ export default function Main() {
                   Capital: {country.capital}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
