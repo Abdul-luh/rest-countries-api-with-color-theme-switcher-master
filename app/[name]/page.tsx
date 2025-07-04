@@ -12,7 +12,9 @@ export default function CountryDetailPage({
 
   //   const nameParam = params?.name;
 
-  const country = data.find((c) => c.name.toLowerCase() === name.toLowerCase());
+  const country = data.find(
+    (c) => c.numericCode.toLowerCase() === name.toLowerCase()
+  );
 
   if (!country) {
     return <div className="text-center mt-10">Country not found.</div>;

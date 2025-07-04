@@ -13,7 +13,7 @@ export default function Main() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {data.map((country) => (
             <Link
-              href={`/${country.name.toLowerCase()}`}
+              href={`/${country.numericCode.toLowerCase()}`}
               key={country.name}
               className="bg-white dark:bg-blue-900 rounded-lg shadow-md m-4"
             >
