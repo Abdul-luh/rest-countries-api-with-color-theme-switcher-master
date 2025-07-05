@@ -31,7 +31,7 @@ export default function Search({
   ];
 
   return (
-    <div className="flex justify-between items-center flex-col md:flex-row gap-4 mb-6">
+    <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
       {/* Search Box */}
       <div className="relative w-full max-w-[400px]">
         <SearchIcon className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-500" />
