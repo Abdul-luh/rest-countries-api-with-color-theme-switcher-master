@@ -48,7 +48,7 @@ export default function Search({
       <div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="py-2 px-4 focus:border-gray-300 rounded dark:bg-blue-900 dark:text-white min-w-[180px] text-left border border-gray-300">
+            <button className="py-2 px-4 rounded dark:bg-blue-900 dark:text-white min-w-[180px] text-left border ">
               {region
                 ? regions.find((r) => r.value === region)?.label
                 : "Filter by region"}

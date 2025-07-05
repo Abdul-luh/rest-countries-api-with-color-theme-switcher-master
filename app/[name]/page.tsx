@@ -24,18 +24,18 @@ export default function CountryDetailPage({
     <main className="flex flex-col items-start w-full min-h-screen dark:bg-blue-950 p-8">
       <Link
         href="/"
-        className="mb-8 px-4 py-2 rounded bg-blue-900 text-white flex items-center gap-2 shadow hover:bg-blue-950 transition-colors"
+        className="my-12 px-4 py-2 rounded dark:bg-blue-900 dark:text-white flex items-center gap-2 shadow-2xl hover:bg-blue-950 transition-colors"
       >
         <span aria-hidden="true">←</span> Back
       </Link>
-      <div className="flex flex-col md:flex-row gap-16 w-full">
-        <div className="flex-1 flex items-center justify-center">
+      <div className="grid md:grid-cols-2 gap-16 w-full">
+        <div className="flex-1 flex items-center justify-center p-4 rounded-xl bg-white border dark:bg-blue-950/90">
           <Image
             src={country.flags.png}
             alt={country.name}
             width={480}
             height={320}
-            className="w-full max-w-[480px] h-auto rounded shadow"
+            className="w-full h-auto rounded shadow"
           />
         </div>
         <div className="flex-1 flex flex-col justify-center">

@@ -58,7 +58,7 @@ export default function Main() {
                 alt={country.name}
                 width={550}
                 height={450}
-                className="w-full h-52 object-cover rounded-t-lg"
+                className="w-full h-52 object-cover rounded-t-lg border-b-2"
               />
               <div className="py-8 px-4">
                 <h2 className="text-xl font-bold mt-2">{country.name}</h2>
